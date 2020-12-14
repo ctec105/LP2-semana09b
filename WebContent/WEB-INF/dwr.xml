@@ -1,0 +1,30 @@
+<!-- Crearemos nuestras funciones javascript que invocarán a los métodos de nuestras clases java -->
+
+<dwr>
+	<allow>
+		<!-- Aquí se registran los beans -->
+		<convert converter="bean" match="demo.recursos.beans.BeanVendedor" />
+		<convert converter="bean" match="demo.recursos.beans.BeanSede"/>
+		<convert converter="bean" match="demo.recursos.beans.BeanUbigeo"/>
+		<convert converter="bean" match="demo.recursos.beans.BeanProducto"/>
+		
+		<!-- Se registran los daos y métodos accesibles mediante javascript -->
+		<create creator="new" javascript="VendedorService" class="demo.accesoDatos.MySqlVendedorDAO">
+			<include method="obtenerPorPK"/>
+		</create>
+		
+		<create creator="new" javascript="SedeService" class="demo.accesoDatos.MySqlSedeDAO">
+			<include method="obtenerPorPK"/>
+		</create>
+		
+		<create creator="new" javascript="UbigeoService" class="demo.accesoDatos.MySqlUbigueoDAO">
+			<include method="traerDepartamentos"/>
+			<include method="traerProvincias"/>
+			<include method="traerDistritos"/>
+		</create>
+		
+		<create creator="new" javascript="ProductoService" class="demo.accesoDatos.MySqlProductoDAO">
+			<include method="listarTodos"/>
+		</create>
+	</allow>
+</dwr>

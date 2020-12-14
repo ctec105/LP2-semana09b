@@ -1,0 +1,35 @@
+.texto{
+	font-size: 15px;
+	color:#1814A9;
+	font-weight: bold
+}
+.cabecera{
+
+	font-size: x-large;
+	color:white;  
+	background: #1814A9;
+}
+
+.seleccionado{
+	color: red;
+    text-decoration: none;
+    font-size:  18px;
+    font-weight: bold
+}
+
+A.menu, A.menu:link, A.menu:visited
+{
+    color: #1814A9;
+    font-family: Verdana, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size:  16px;
+    font-weight: bold
+}
+  
+A.menu:hover
+{
+    color: #1814A9;
+    text-decoration: none;
+    font-size:  16px;
+    font-weight: bold 
+}
